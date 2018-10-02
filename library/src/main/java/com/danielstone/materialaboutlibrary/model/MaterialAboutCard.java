@@ -1,16 +1,14 @@
 package com.danielstone.materialaboutlibrary.model;
 
-
-import android.support.annotation.ColorInt;
-import android.support.annotation.StringRes;
-import android.support.annotation.StyleRes;
-import android.support.v7.widget.RecyclerView;
-
 import com.danielstone.materialaboutlibrary.items.MaterialAboutItem;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.UUID;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.StringRes;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class MaterialAboutCard {
 

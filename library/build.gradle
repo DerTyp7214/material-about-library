@@ -8,6 +8,8 @@ def versionMinor = 3
 def versionPatch = 0
 def versionBuild = 0 // bump for dogfood builds, public betas, etc.
 
+def legacy_support_version = '1.0.0'
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
@@ -28,8 +30,9 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile "com.android.support:appcompat-v7:$supportLibVersion"
-    compile "com.android.support:cardview-v7:$supportLibVersion"
-    compile "com.android.support:design:$supportLibVersion"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.google.android.material:material:$legacy_support_version"
+    implementation "androidx.appcompat:appcompat:$legacy_support_version"
+    implementation "androidx.legacy:legacy-support-v4:$legacy_support_version"
+    implementation "androidx.legacy:legacy-support-v13:$legacy_support_version"
 }

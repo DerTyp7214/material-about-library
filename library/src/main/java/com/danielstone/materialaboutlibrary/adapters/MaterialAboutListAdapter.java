@@ -1,34 +1,32 @@
 package com.danielstone.materialaboutlibrary.adapters;
 
 import android.content.Context;
-import android.support.v7.recyclerview.extensions.AsyncListDiffer;
-import android.support.v7.util.DiffUtil;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SimpleItemAnimator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.danielstone.materialaboutlibrary.R;
-import com.danielstone.materialaboutlibrary.items.MaterialAboutItem;
 import com.danielstone.materialaboutlibrary.model.MaterialAboutCard;
-import com.danielstone.materialaboutlibrary.model.MaterialAboutList;
 import com.danielstone.materialaboutlibrary.util.DefaultViewTypeManager;
 import com.danielstone.materialaboutlibrary.util.ViewTypeManager;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
+
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.AsyncListDiffer;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 
 public class MaterialAboutListAdapter extends RecyclerView.Adapter<MaterialAboutListAdapter.MaterialAboutListViewHolder> {
 
 
-    private final AsyncListDiffer<MaterialAboutCard> differ = new AsyncListDiffer<MaterialAboutCard>(this, DIFF_CALLBACK);
+    private final AsyncListDiffer<MaterialAboutCard>
+            differ = new AsyncListDiffer<MaterialAboutCard>(this, DIFF_CALLBACK);
 
     private Context context;
 
@@ -133,8 +131,8 @@ public class MaterialAboutListAdapter extends RecyclerView.Adapter<MaterialAbout
         MaterialAboutListViewHolder(View view) {
             super(view);
             cardView = view.findViewById(R.id.mal_list_card);
-            title = (TextView) view.findViewById(R.id.mal_list_card_title);
-            recyclerView = (RecyclerView) view.findViewById(R.id.mal_card_recyclerview);
+            title = view.findViewById(R.id.mal_list_card_title);
+            recyclerView = view.findViewById(R.id.mal_card_recyclerview);
             adapter = new MaterialAboutItemAdapter(viewTypeManager);
             recyclerView.setLayoutManager(new LinearLayoutManager(context));
             recyclerView.setAdapter(adapter);

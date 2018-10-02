@@ -54,5 +54,4 @@
             tools:visibility="visible"
             tools:text="Current Version Of App" />
     </LinearLayout>
-
 </LinearLayout>

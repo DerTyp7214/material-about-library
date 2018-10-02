@@ -4,8 +4,6 @@ package com.danielstone.materialaboutlibrary.items;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.StringRes;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageView;
@@ -14,6 +12,9 @@ import android.widget.TextView;
 import com.danielstone.materialaboutlibrary.R;
 import com.danielstone.materialaboutlibrary.holders.MaterialAboutItemViewHolder;
 import com.danielstone.materialaboutlibrary.util.ViewTypeManager;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.StringRes;
 
 import static android.view.View.GONE;
 
